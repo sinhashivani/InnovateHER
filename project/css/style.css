@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.menu-bar {
+    background-color: #F1E0E0;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu-bar a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.create-account {
+    color: #823038;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.username-box,
+.display-name-box,
+.password-box,
+.profile-pic-box {
+    background-color: #C6E2B5;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+label {
+    color: #44633F;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+    width: 50%;
+    height: 20px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+input[type="file"] {
+    padding: 0;
+}
