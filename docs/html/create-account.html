@@ -7,7 +7,27 @@
     <title>Rezonance - Create Account</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="create-account.css">
+    <link rel="stylesheet" href="../css/create-account.css">
+    <style>
+        .submit-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submit-button button {
+            padding: 10px 20px;
+            background-color: #823038;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-button button:hover {
+            background-color: #a54646;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,24 +45,27 @@
     <div class="create-account-header">
         <h1>Create Account:</h1>
     </div>
-    <div class="username-input">
-        <label for="username">Username:</label>
-        <input type="text" id="username" placeholder="Enter username">
-    </div>
-    <div class="display-name-input">
-        <label for="display-name">Display Name:</label>
-        <input type="text" id="display-name" placeholder="Enter display name">
-    </div>
-    <div class="password-input">
-        <label for="password">Password:</label>
-        <input type="password" id="password" placeholder="Enter password">
-    </div>
-    <div class="pfp-input">
-        <label for="pfp">PFP:</label>
-        <input type="file" id="pfp" accept=".png, .jpg, .jpeg">
-        <img id="pfp-preview" src="" alt="PFP preview">
-    </div>
-
+    <form action="/submit-account" method="POST" enctype="multipart/form-data">
+        <div class="username-input">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+        </div>
+        <div class="display-name-input">
+            <label for="display-name">Display Name:</label>
+            <input type="text" id="display-name" name="display-name" placeholder="Enter display name" required>
+        </div>
+        <div class="password-input">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+        </div>
+        <div class="pfp-input">
+            <label for="pfp">PFP:</label>
+            <input type="file" id="pfp" name="pfp" accept=".png, .jpg, .jpeg">
+        </div>
+        <div class="submit-button">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
     <script src="script.js"></script>
 </body>
 

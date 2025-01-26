@@ -19,6 +19,7 @@ nav ul {
 
 nav a {
     color: #000;
+    /* Matches the login.css header font color */
     text-decoration: none;
     padding: 15px;
 }
@@ -35,22 +36,62 @@ nav a {
     object-fit: cover;
 }
 
+h1 {
+    color: #823038;
+    /* Matches the login.css header text color */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
 .box-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    /* Adds consistent spacing between boxes */
+    margin: 40px auto;
+    /* Centers the container */
 }
 
 .box {
     background-color: #C6E2B5;
-    padding: 20px;
-    width: 50%;
-    margin-bottom: 10px;
+    padding: 30px;
+    width: 70%;
+    /* Makes the boxes wider */
+    max-width: 800px;
+    /* Prevents excessive width on large screens */
     border-radius: 10px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Adds a shadow for depth */
 }
 
 .box p {
-    color: #44633F;
-    font-size: 24px;
+    color: #000;
+    /* Matches the navigation font color */
+    font-size: 20px;
+    /* Adjusted for better readability */
+    line-height: 1.6;
+    /* Adds spacing between lines */
+}
+
+.submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFD2C9;
+    color: #000;
+    /* Matches navigation font color */
+    cursor: pointer;
+    width: 50%;
+    margin: 0 auto;
+    font-family: 'Raleway', 'Sans-Serif';
+}
+
+.submit-button:hover {
+    background-color: #FFC7B9;
+    transform: scale(1.05);
+    /* Adds subtle hover scaling */
+    cursor: pointer;
 }
