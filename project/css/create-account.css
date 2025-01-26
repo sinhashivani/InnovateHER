@@ -1,5 +1,5 @@
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: Raleway;
     background-color: #F1E0E0;
     margin: 0;
     padding: 0;
@@ -7,24 +7,47 @@ body {
 
 .menu-bar {
     background-color: #FFD2C9;
-    padding: 1em;
+    padding: 1.5em;
+    color: black;
     text-align: center;
+    font-family: Raleway;
+    margin-top: 5px;
 }
 
 .menu-bar ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    /* Use flexbox for better control */
+    justify-content: center;
+    /* Center items horizontally */
 }
 
 .menu-bar li {
-    display: inline-block;
-    margin-right: 20px;
+    margin-right: 25px;
+    /* Adjust the margin-right to reduce spacing */
+}
+
+.menu-bar li:last-child {
+    margin-right: 0;
+    /* Remove the right margin from the last item */
 }
 
 .menu-bar a {
+    color: #000000;
     text-decoration: none;
-    color: #000;
+    padding: 5px 15px;
+    /* Add padding around the link for better spacing */
+    display: inline-block;
+}
+
+.menu-bar a:hover {
+    color: #fff;
+    background-color: #823038;
+    /* Add hover effect */
+    border-radius: 5px;
+    /* Optional: add rounded corners */
 }
 
 .create-account-header {

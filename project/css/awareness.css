@@ -1,16 +1,8 @@
-/* General Body Styling */
-body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #F1E0E0;
-    margin: 0;
-    padding: 0;
-}
-
-/* Menu Bar */
 .menu-bar {
     background-color: #FFD2C9;
-    padding: 1em;
+    padding: 1.5em;
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 
 .menu-bar ul {
@@ -21,17 +13,32 @@ body {
 
 .menu-bar ul li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 30px;
+    /* Increased the margin-right to create more space between items */
+}
+
+.menu-bar ul li:last-child {
+    margin-right: 0;
+    /* Ensures no extra space after the last item */
 }
 
 .menu-bar ul li a {
     text-decoration: none;
     color: #000;
+    padding: 5px 15px;
+    /* Added some padding to the links for more spacing and better clickability */
+    display: inline-block;
+    /* Ensures padding works around the text */
 }
 
 .menu-bar ul li a:hover {
     color: #fff;
+    background-color: #823038;
+    /* Added a background color on hover for better visual feedback */
+    border-radius: 5px;
+    /* Added border-radius to make the hover effect look nicer */
 }
+
 
 /* Create Account Header */
 .create-account-header {
@@ -43,6 +50,11 @@ body {
     font-weight: bold;
     font-size: 36px;
     color: #823038;
+}
+
+/* Body */
+body {
+    background-color: #F1E0E0;
 }
 
 /* Input Sections */

@@ -4,27 +4,47 @@ body {
 }
 
 .menu-bar {
-    background-color: #F1E0E0;
-    padding: 10px;
-    text-align: center;
-}
-
-.menu-bar {
     background-color: #FFD2C9;
-    padding: 10px;
+    padding: 1.5em;
     color: black;
     text-align: center;
+    font-family: Raleway;
 }
 
+.menu-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Use flexbox for better control over spacing */
+    justify-content: center;
+    /* Center the items */
+}
 
 .menu-bar li {
-    display: inline-block;
-    margin-right: 20px;
+    margin-right: 30px;
+    /* Increased the margin-right for more spacing between items */
+}
+
+.menu-bar li:last-child {
+    margin-right: 0;
+    /* Remove margin from the last item */
 }
 
 .menu-bar a {
     color: #000000;
     text-decoration: none;
+    padding: 5px 15px;
+    /* Add padding for better spacing around links */
+    display: inline-block;
+}
+
+.menu-bar a:hover {
+    color: #fff;
+    background-color: #823038;
+    /* Add background color on hover */
+    border-radius: 5px;
+    /* Optional: Add rounded corners for hover effect */
 }
 
 .welcome-to-cart {
@@ -37,12 +57,16 @@ body {
 .cart-container {
     display: flex;
     align-items: center;
+    justify-content: center;
+    /* Center the cart items horizontally */
     margin-top: 20px;
 }
 
 .photo-box,
 .name-box,
-.cost-box {
+.cost-box,
+.checkout-box {
+    /* Consolidated the styling for these elements */
     background-color: #C6E2B5;
     padding: 10px;
     margin-right: 10px;
@@ -55,13 +79,6 @@ body {
 
 .checkout-box {
     background-color: #FFD2C9;
-    padding: 10px;
-    margin-right: 10px;
-    height: 200px;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .label-text {

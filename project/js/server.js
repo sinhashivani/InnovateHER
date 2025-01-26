@@ -284,7 +284,97 @@ app.get('/api/user/:username', async (req, res) => {
     }
 });
 
-// Graceful shutdown
+//OUTPUTS IMAGES FROM DATABASE
+// app.get('/api/image/:id', async (req, res) => {
+//     try {
+//         const db = await connectToDatabase('catalogDB'); // Connect to the correct database
+//         const collection = db.collection('catalog_profiles'); // Access the correct collection
+
+//         const imageID = req.params.id; // Get the ID from the request parameters
+
+//         // Find the image using the ID
+//         const imageData = await collection.findOne({ _id: new MongoClient.ObjectId(imageID) });
+
+//         if (!imageData) {
+//             return res.status(404).json({
+//                 message: 'Image not found',
+//             });
+//         }
+
+//         res.status(200).json({
+//             message: 'Image found',
+//             imageData, // Return the image data
+//         });
+//     } catch (error) {
+//         console.error('Error fetching image:', error);
+//         res.status(500).json({
+//             message: 'Something went wrong, please try again later.',
+//             error: error.message,
+//         });
+//     }
+// });
+
+// document.addEventListener('DOMContentLoaded', async () => {
+//     const imageContainer = document.getElementById('image-container'); // A container in your HTML to display the image
+//     const imageID = '63aef5820bcd2f3f44e9b7c2'; // Replace with the actual image ID
+
+//     try {
+//         const response = await fetch(`http://localhost:5500/api/image/${imageID}`);
+//         if (!response.ok) {
+//             throw new Error('Image not found or an error occurred');
+//         }
+
+//         const data = await response.json();
+//         const imageUrl = data.imageData.clothesPicture; // Assuming the image URL is stored in 'clothesPicture'
+
+//         // Create an img element and append it to the container
+//         const imgElement = document.createElement('img');
+//         imgElement.src = imageUrl; // Set the image source
+//         imgElement.alt = data.imageData.description || 'Image'; // Add an alt attribute
+//         imgElement.style.width = '300px'; // Optional: Set styling
+
+//         imageContainer.appendChild(imgElement); // Add the image to the container
+//     } catch (error) {
+//         console.error('Error fetching or displaying image:', error);
+//         imageContainer.textContent = 'Unable to load image.';
+//     }
+// });
+
+// Get All Catalog Profiles
+app.get('/api/catalog_profiles', async (req, res) => {
+    console.log("Fetching catalog profiles...");
+    try {
+        const db = await connectToDatabase('catalogDB'); // Specify your database name
+        const collection = db.collection('catalog_profiles');
+
+        // Fetch all profiles
+        const profiles = await collection.find({}).toArray();
+
+        if (profiles.length === 0) {
+            return res.status(404).json({ message: "No profiles found in the catalog." });
+        }
+
+        res.status(200).json(profiles);
+        console.log("Catalog profiles sent to client.");
+    } catch (error) {
+        console.error("Error fetching catalog profiles:", error);
+        res.status(500).json({
+            message: "Error fetching catalog profiles",
+            error: error.message,
+        });
+    }
+});
+
+// Start server
+app.listen(PORT, async () => {
+    try {
+        console.log(`Server is running on http://localhost:${PORT}`);
+    } catch (error) {
+        console.error("Could not start server:", error);
+    }
+});
+
+// Graceful
 process.on('SIGINT', async () => {
     try {
         await client.close();
