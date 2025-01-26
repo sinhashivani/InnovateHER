@@ -1,0 +1,81 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #F1E0E0;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar {
+    background-color: #FFD2C9;
+    padding: 1em;
+    text-align: center;
+}
+
+.menu-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu-bar a {
+    text-decoration: none;
+    color: #000;
+}
+
+.create-account-header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.create-account-header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #823038;
+}
+
+.username-input,
+.display-name-input,
+.password-input,
+.pfp-input {
+    background-color: #C6E2B5;
+    padding: 1em;
+    margin: 20px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.username-input label,
+.display-name-input label,
+.password-input label,
+.pfp-input label {
+    color: #44633F;
+}
+
+.username-input input,
+.display-name-input input,
+.password-input input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.pfp-input input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#pfp-preview {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}

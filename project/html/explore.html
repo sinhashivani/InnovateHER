@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/upload.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Clothes Catalog</title>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="create-account.html">Create Account</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="upload.html">Upload</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="awareness.html">Awareness</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+    <div class="catalog-container">
+        <h1>Clothes Catalog</h1>
+        <div class="catalog-profiles">
+            <!-- Profiles will be dynamically added here -->
+        </div>
+    </div>
+    <script>
+        // Fetch the profiles from the catalog_profiles database when the page loads
+        document.addEventListener("DOMContentLoaded", async () => {
+            try {
+                const response = await fetch("http://localhost:5500/api/catalog_profiles");
+                if (response.ok) {
+                    const profiles = await response.json();
+                    displayCatalogProfiles(profiles);
+                } else {
+                    console.error("Failed to fetch catalog profiles.");
+                }
+            } catch (error) {
+                console.error("Error fetching catalog profiles:", error);
+            }
+        });
+
+        function displayCatalogProfiles(profiles) {
+            const catalogContainer = document.querySelector(".catalog-profiles");
+            catalogContainer.innerHTML = ""; // Clear existing content
+            profiles.forEach(profile => {
+                const profileDiv = document.createElement("div");
+                profileDiv.className = "profile";
+
+                profileDiv.innerHTML = `
+                    <p><strong>Username:</strong> ${profile.username}</p>
+                    <p><strong>Description:</strong> ${profile.description}</p>
+                    <p><strong>Price:</strong> $${profile.price}</p>
+                    <img src="${profile.picture}" alt="Clothes Picture" />
+                `;
+                catalogContainer.appendChild(profileDiv);
+            });
+        }
+    </script>
+</body>
+
+</html>

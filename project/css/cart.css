@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Raleway;
+    background-color: #F1E0E0;
 }
 
 .menu-bar {
@@ -8,11 +9,13 @@ body {
     text-align: center;
 }
 
-.menu-bar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.menu-bar {
+    background-color: #FFD2C9;
+    padding: 10px;
+    color: black;
+    text-align: center;
 }
+
 
 .menu-bar li {
     display: inline-block;

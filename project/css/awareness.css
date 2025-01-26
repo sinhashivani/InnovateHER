@@ -1,0 +1,119 @@
+/* General Body Styling */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #F1E0E0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu Bar */
+.menu-bar {
+    background-color: #FFD2C9;
+    padding: 1em;
+    text-align: center;
+}
+
+.menu-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu-bar ul li a:hover {
+    color: #fff;
+}
+
+/* Create Account Header */
+.create-account-header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.create-account-header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #823038;
+}
+
+/* Input Sections */
+.username-input,
+.display-name-input,
+.password-input,
+.pfp-input {
+    background-color: #C6E2B5;
+    padding: 1em;
+    margin: 20px auto;
+    width: 500px;
+    border-radius: 5px;
+}
+
+.username-input label,
+.display-name-input label,
+.password-input label,
+.pfp-input label {
+    color: #44633F;
+}
+
+.username-input input,
+.display-name-input input,
+.password-input input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.pfp-input input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#pfp-preview {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Awareness Title */
+.awareness-title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.awareness-title h1 {
+    font-weight: bold;
+    font-size: 48px;
+    color: #823038;
+}
+
+/* Awareness Box */
+.awareness-box {
+    background-color: #C6E2B5;
+    width: 50%;
+    margin: 50px auto;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.awareness-box p {
+    color: #44633F;
+    font-size: 18px;
+    line-height: 1.6;
+}

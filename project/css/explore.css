@@ -1,0 +1,162 @@
+/* General Body Styling */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #F1E0E0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    background-color: #F1E0E0;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar ul li {
+    margin: 0 15px;
+}
+
+.nav-bar ul li a {
+    color: #44633F;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-bar ul li a:hover {
+    color: #B3D8B5;
+    text-decoration: underline;
+}
+
+.nav-bar ul li a.active {
+    color: #823038;
+    font-weight: 700;
+}
+
+/* Catalog Container */
+.catalog-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.catalog-container h1 {
+    color: #823038;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Catalog Profiles */
+.catalog-profiles {
+    margin: 20px auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.catalog-profiles .profile {
+    background-color: #FFD2C9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.catalog-profiles .profile p {
+    margin: 5px 0;
+    color: #44633F;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.catalog-profiles .profile img {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Container */
+.form-container .username-input,
+.form-container .display-name-input,
+.form-container .description-input,
+.form-container .price-input,
+.form-container .clothes-picture-input {
+    background-color: #C6E2B5;
+    padding: 1em;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-container label {
+    color: #44633F;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+#clothes-picture-preview {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+.button {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #C6E2B5;
+    color: #44633F;
+    display: inline-block;
+    margin: 10px 5px;
+    width: auto;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #B3D8B5;
+    transform: translateY(-2px);
+}
