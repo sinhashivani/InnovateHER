@@ -1,0 +1,71 @@
+.catalog-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.catalog-container h1 {
+    color: #823038;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#image-upload {
+    display: none;
+}
+
+.button {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #C6E2B5;
+    color: #44633F;
+    display: block;
+    margin: 10px auto;
+    width: 50%;
+    transition: background-color 0.2s ease-in-out;
+    font-family: 'Raleway', sans-serif;
+}
+
+.button:hover {
+    background-color: #B3D8B5;
+}
+
+.nav-bar {
+    background-color: #F1E0E0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-bar ul li a {
+    color: #44633F;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-bar ul li a:hover {
+    color: #B3D8B5;
+}
+
+.nav-bar ul li a.active {
+    color: #823038;
+}

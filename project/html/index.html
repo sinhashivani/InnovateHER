@@ -4,14 +4,13 @@
 <head>
     <title>Rezonance User Page</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/App.js" defer></script> <!-- Load app.js -->
 </head>
 
 <body>
     <div class="menu-bar">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="user.html">User</a></li>
+            <li><a href="upload.html">Upload</a></li>
             <li><a href="friends.html">Friends</a></li>
             <li><a href="catalog.html">Clothes Catalog</a></li>
             <li><a href="near-me.html">Near Me</a></li>
@@ -45,7 +44,8 @@
         <label for="profile-pic">Profile Pic: </label>
         <input type="file" id="profile-pic" name="profile-pic" accept=".png, .jpg">
     </div>
-    <button id="createProfileBtn">Create Profile</button>
+    <button id="createProfileBtn" onClick="createProfile()">Create Profile</button>
+    <script src="../js/app.js" defer></script> <!-- Load app.js -->
 </body>
 
 </html>

@@ -1,10 +1,9 @@
 class UserProfile {
-    constructor(username, displayName, email, password, bio, profilePicture) {
+    constructor(username, displayName, email, password, profilePicture) {
         this.username = username;
         this.displayName = displayName;
         this.email = email;
         this.password = password;
-        this.bio = bio;
         this.wantMessage = true; // Default value
         this.profilePicture = profilePicture || null;
         this.userID = UserProfile.generateUniqueUserID();
@@ -49,14 +48,6 @@ class UserProfile {
 
     setPassword(password) {
         this.password = password;
-    }
-
-    getBio() {
-        return this.bio;
-    }
-
-    setBio(bio) {
-        this.bio = bio;
     }
 
     getWantMessage() {
@@ -144,7 +135,7 @@ class UserProfile {
 
     // Convert the user profile to a string for storage or display
     toString() {
-        return `${this.username},${this.displayName},${this.email},${this.password},${this.bio},${this.wantMessage}`;
+        return `${this.username},${this.displayName},${this.email},${this.password},${this.wantMessage}`;
     }
 
     // Check equality with another UserProfile
@@ -156,7 +147,6 @@ class UserProfile {
             this.displayName === other.displayName &&
             this.email === other.email &&
             this.password === other.password &&
-            this.bio === other.bio &&
             JSON.stringify(this.profilePicture) === JSON.stringify(other.profilePicture)
         );
     }
